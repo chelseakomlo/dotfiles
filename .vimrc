@@ -15,4 +15,5 @@ filetype plugin indent on    " required
 syntax enable
 
 set tabstop=4
-
+set shiftwidth=4
+set expandtab
