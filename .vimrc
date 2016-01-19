@@ -8,12 +8,13 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdTree'
 Plugin 'scrooloose/syntastic'
+Plugin 'ntpeters/vim-better-whitespace'
 
 call vundle#end()            " required
 
 filetype plugin indent on    " required
 syntax enable
 
-set tabstop=4
-set shiftwidth=4
-set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
