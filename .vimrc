@@ -15,6 +15,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 syntax enable
 
+set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
