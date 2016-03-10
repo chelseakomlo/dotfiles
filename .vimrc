@@ -18,3 +18,7 @@ syntax enable
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+
+set runtimepath+=$HOME/.vim/bundle/vundle/
+runtime autoload/vundle.vim
+
