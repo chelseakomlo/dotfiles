@@ -25,6 +25,7 @@ echo "set up vimrc"
 
 # create a new bashrc
 cp .bashrc ~/.bashrc
+source ~/.bashrc
 echo "set up bashrc"
 
 cp .tmux.conf ~/.tmux.conf
