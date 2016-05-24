@@ -27,4 +27,7 @@ set showmatch
 
 set backspace=2 " make backspace work like most other apps
 
+set nobackup
+set nowritebackup
+
 let g:syntastic_javascript_checkers = ['eslint']
