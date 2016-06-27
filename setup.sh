@@ -9,8 +9,8 @@ echo "installed homebrew"
 brew install tmux direnv
 brew install gnupg gnupg2
 brew install mutt
-brew install tor
-brew install torsocks
+brew install tor torsocks
+brew install coreutils
 
 # Install prerequisites for running Pond
 brew install go gtk+3 gtkspell3 mercurial
