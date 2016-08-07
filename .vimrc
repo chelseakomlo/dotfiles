@@ -9,7 +9,7 @@ Plugin 'scrooloose/nerdTree'
 Plugin 'scrooloose/syntastic'
 Plugin 'pangloss/vim-javascript'
 Plugin 'fatih/vim-go'
-" need to update to 7.3.598+ Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'ntpeters/vim-better-whitespace'
 
 call vundle#end()            " required
@@ -31,3 +31,7 @@ set nobackup
 set nowritebackup
 
 let g:syntastic_javascript_checkers = ['eslint']
+
+" issues using both vim-go and syntastic
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
