@@ -9,7 +9,7 @@ Plugin 'scrooloose/nerdTree'
 Plugin 'scrooloose/syntastic'
 Plugin 'pangloss/vim-javascript'
 Plugin 'fatih/vim-go'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe' this keeps killing things
 Plugin 'ntpeters/vim-better-whitespace'
 
 call vundle#end()            " required
@@ -28,10 +28,24 @@ set showmatch
 set backspace=2 " make backspace work like most other apps
 
 set nobackup
+
 set nowritebackup
 
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_c_check_header = 1
+let g:syntastic_c_check_headers = ['make', 'splint']
+
+
 
 " issues using both vim-go and syntastic
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_go_checkers = ['golint', 'go', 'fmt', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:go_list_type = "quickfix"
+
+" vim becomes sluggish when editing go files
+let g:go_highlight_structs = 0
+let g:go_highlight_interfaces = 0
+let g:go_highlight_operators = 0
+let g:go_fmt_command = "goimports"
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosav_enabled = ["vet", "golint", "errcheck"]
