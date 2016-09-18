@@ -31,6 +31,8 @@ set nobackup
 
 set nowritebackup
 
+set spell spelllang=en
+
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_c_check_header = 1
 let g:syntastic_c_check_headers = ['make', 'splint']
