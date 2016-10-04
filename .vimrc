@@ -51,3 +51,19 @@ let g:go_highlight_operators = 0
 let g:go_fmt_command = "goimports"
 let g:go_metalinter_autosave = 1
 let g:go_metalinter_autosav_enabled = ["vet", "golint", "errcheck"]
+
+set textwidth=80
+
+" consistent line wrapping is nice
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  let s = @/
+  %s/\s\+$//e
+  call cursor(l, c)
+  let @/ = s
+endfun
+autocmd FileType c,cpp,js,javascript,java,php,ruby autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
+" strip trailing whitespace
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
