@@ -50,17 +50,19 @@ set cino=(0 "This sets your wrap for a function to the opening paragraph
 set list
 set listchars=tab:>-
 
+
+" Syntastic config
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+let g:syntastic_loc_list_height=2
+
 " Syntastic JS
 let g:syntastic_javascript_checkers = ['eslint']
 
 " Syntastic C
-let g:syntastic_c_check_header = 1
-let g:syntastic_c_check_headers = ['make', 'splint', 'gcc', 'clang']
 let g:syntastic_c_remove_include_errors = 1
 
 " issues using both vim-go and syntastic
