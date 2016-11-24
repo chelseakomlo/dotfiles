@@ -9,13 +9,16 @@ Plugin 'scrooloose/nerdTree'
 Plugin 'scrooloose/syntastic'
 Plugin 'pangloss/vim-javascript'
 Plugin 'fatih/vim-go'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe' why pain
 Plugin 'ntpeters/vim-better-whitespace'
-" take a look at this one http://www.vim.org/scripts/script.php?script_id=213
+Plugin 'c.vim'
+Plugin 'tomasr/molokai'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" why didn't this get committed?
+colorscheme molokai
 syntax on
 
 set number
@@ -39,7 +42,13 @@ set statusline+=%*
 
 " try this one out
 set fo+=n
+
+" c specific formatting
 set cino=(0 "This sets your wrap for a function to the opening paragraph
+
+" show tabs always
+set list
+set listchars=tab:>-
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -66,6 +75,10 @@ let g:go_highlight_operators = 0
 let g:go_fmt_command = "goimports"
 let g:go_metalinter_autosave = 1
 let g:go_metalinter_autosav_enabled = ["vet", "golint", "errcheck"]
+
+" because one plugin isn't enough for c syntax highlighting
+let g:C_UseTool_cmake   = 'yes'
+let g:C_UseTool_doxygen = 'yes'
 
 set textwidth=79
 set colorcolumn=80
