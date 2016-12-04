@@ -1,8 +1,11 @@
 export GOPATH=$HOME/gopkg
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:/usr/local/lib
 
-alias docker-start='sudo systemctl start docker'
 alias gpg='gpg2'
-
 alias open='xdg-open'
-alias tor-start='sudo systemctl start tor'
+
+alias start-tor='sudo systemctl start tor'
+alias start-docker='sudo systemctl start docker'
+
+alias copy='xsel --clipboard --input'
+alias paste='xsel --clipboard --output'

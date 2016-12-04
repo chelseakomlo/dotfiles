@@ -17,7 +17,6 @@ Plugin 'tomasr/molokai'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" why didn't this get committed?
 colorscheme molokai
 syntax on
 
@@ -45,11 +44,6 @@ set fo+=n
 
 " c specific formatting
 set cino=(0 "This sets your wrap for a function to the opening paragraph
-
-" show tabs always
-set list
-set listchars=tab:>-
-
 
 " Syntastic config
 let g:syntastic_always_populate_loc_list = 1
