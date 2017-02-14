@@ -1,5 +1,5 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -51,7 +51,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let g:syntastic_loc_list_height=2
+let g:syntastic_loc_list_height=4
 
 " Syntastic JS
 let g:syntastic_javascript_checkers = ['eslint']
@@ -78,6 +78,14 @@ let g:C_UseTool_doxygen = 'yes'
 
 set textwidth=79
 set colorcolumn=80
+
+" for documentation
+"set textwidth=72
+"set colorcolumn=73
+
+" Make double-<Esc> clear search highlights
+nnoremap <silent> <Esc><Esc> <Esc> :nohlsearch<CR><Esc>
+
 hi ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 " consistent line wrapping is nice
