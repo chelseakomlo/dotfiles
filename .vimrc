@@ -9,10 +9,10 @@ Plugin 'scrooloose/nerdTree'
 Plugin 'scrooloose/syntastic'
 Plugin 'pangloss/vim-javascript'
 Plugin 'fatih/vim-go'
-" Plugin 'Valloric/YouCompleteMe' why pain
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'c.vim'
 Plugin 'tomasr/molokai'
+Plugin 'rust-lang/rust.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -33,6 +33,9 @@ set nobackup
 set nowritebackup
 
 map <F5> :setlocal spell! spelllang=en<CR>
+
+" Make double-<Esc> clear search highlights
+nnoremap <silent> <Esc><Esc> <Esc> :nohlsearch<CR><Esc>
 
 " Recommended Syntastic settings
 set statusline+=%#warningmsg#
@@ -78,15 +81,18 @@ let g:go_metalinter_autosav_enabled = ["vet", "golint", "errcheck"]
 let g:C_UseTool_cmake   = 'yes'
 let g:C_UseTool_doxygen = 'yes'
 
+" rust syntax highlighting
+let g:rustfmt_autosave = 1
+
+" allows goto commands for rust
+let g:ycm_rust_src_path =  '/home/chelseakomlo/.cargo/bin/rustc'
+
 set textwidth=79
 set colorcolumn=80
 
 " for documentation
 "set textwidth=72
 "set colorcolumn=73
-
-" Make double-<Esc> clear search highlights
-nnoremap <silent> <Esc><Esc> <Esc> :nohlsearch<CR><Esc>
 
 hi ColorColumn ctermbg=lightgrey guibg=lightgrey
 
