@@ -32,7 +32,13 @@ set backspace=2 " make backspace work like most other apps
 set nobackup
 set nowritebackup
 
-map <F5> :setlocal spell! spelllang=en<CR>
+" spell check is useful
+set spelllang=en
+"set spellfile=$HOME/Dropbox/vim/spell/en.utf-8.add
+set spell
+
+" turn off spelling
+map <F5> :setlocal nospell<CR>
 
 " Make double-<Esc> clear search highlights
 nnoremap <silent> <Esc><Esc> <Esc> :nohlsearch<CR><Esc>
